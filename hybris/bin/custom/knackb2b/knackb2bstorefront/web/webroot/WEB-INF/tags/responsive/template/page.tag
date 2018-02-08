@@ -35,12 +35,7 @@
 			<a href="#skip-to-content" class="skiptocontent" data-role="none">${fn:escapeXml(skipToContent)}</a>
 			<spring:theme code="text.skipToNavigation" var="skipToNavigation" />
 			<a href="#skiptonavigation" class="skiptonavigation" data-role="none">${fn:escapeXml(skipToNavigation)}</a>
-
-
-			<header:header hideHeaderLinks="${hideHeaderLinks}" />
-
-
-			
+			<header:header hideHeaderLinks="${hideHeaderLinks}" />			
 			
 			<a id="skip-to-content"></a>
 		
