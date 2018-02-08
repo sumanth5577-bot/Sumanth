@@ -5,7 +5,7 @@
 <%@ taglib prefix="breadcrumb" tagdir="/WEB-INF/tags/responsive/nav/breadcrumb" %>
 
 
-<template:page pageTitle="${pageTitle}" layout="1">
+<template:page pageTitle="${pageTitle}">
     <cms:pageSlot position="Section1" var="feature">
         <cms:component component="${feature}" />
     </cms:pageSlot>
