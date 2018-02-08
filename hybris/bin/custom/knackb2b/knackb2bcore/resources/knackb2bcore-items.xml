@@ -46,7 +46,7 @@
 				<attribute qualifier="extImageFileName" type="java.lang.String">
 				<description>Additional text attribute that holds Image file name.</description>
 					<modifiers read="true" write="true" search="true" optional="false" unique="true"/>
-					<persistence type="property" attributeHandler="extMediaImgUrlHandler"/>
+					<persistence type="property" />
 				</attribute>
 			</attributes>
 		</itemtype>
