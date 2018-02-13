@@ -86,6 +86,126 @@ UPDATE PageTemplate;$contentCV[unique=true];uid[unique=true];velocityTemplate[tr
 #bharath New Homepage 
 ;;KnackLandingPage1Template				 ;$jarResourceCms/structure-view/structure_KnackPage1Template.vm
 
+# Start of knack template 1 
+#Creating page Template
+#-----------------------
+INSERT_UPDATE PageTemplate;$contentCV[unique=true];uid[unique=true];name;frontendTemplateName;restrictedPageTypes(code);active[default=true]
+;;KnackLandingPage1Template;Knack Landing Page 1 Template;layout/knackLayout1Page;ContentPage
+
+#Set up the ContentSlotNames for the template:
+#---------------------------------------------
+INSERT_UPDATE ContentSlotName;name[unique=true];template(uid,$contentCV)[unique=true][default='KnackLandingPage1Template'];validComponentTypes(code)
+;SiteLogo;;;logo
+;HeaderLinks;;;headerlinks
+;SearchBox;;;searchbox
+;MiniCart;;;minicart
+;NavigationBar;;;navigation
+;Section1;;;wide
+;Section2A;;;wide
+;Section2B;;;narrow
+#;Section2C;;;narrow
+;Section3;;;wide
+;Section4;;;narrow
+#;Section5;;;wide
+;Footer;;;footer
+;TopHeaderSlot;;;wide
+;BottomHeaderSlot;;;wide
+;PlaceholderContentSlot;;;
+
+#The list of ContentSlotForTemplate bindings for the PageTemplate is added as follows:
+#-------------------------------------------------------------------------------------
+INSERT_UPDATE ContentSlotForTemplate;$contentCV;uid[unique=true];position[unique=true];pageTemplate(uid,$contentCV)[unique=true][default='KnackLandingPage1Template'];contentSlot(uid,$contentCV)[unique=true];allowOverwrite
+;;SiteLogo-KnackPage1;SiteLogo;;SiteLogoSlot;true
+;;HomepageLink-KnackPage1;HomepageNavLink;;HomepageNavLinkSlot;true
+;;MiniCart-KnackPage1;MiniCart;;MiniCartSlot;true
+;;NavigationBar-KnackPage1;NavigationBar;;NavigationBarSlot;true
+;;Footer-KnackPage1;Footer;;FooterSlot;true
+;;HeaderLinks-KnackPage1;HeaderLinks;;HeaderLinksSlot;true
+;;SearchBox-KnackPage1;SearchBox;;SearchBoxSlot;true
+;;TopHeaderSlot-KnackPage1;TopHeaderSlot;;TopHeaderSlot;true
+;;BottomHeaderSlot-KnackPage1;BottomHeaderSlot;;BottomHeaderSlot;true
+;;PlaceholderContentSlot-KnackPage1;PlaceholderContentSlot;;PlaceholderContentSlot;true
+
+#Create a Velocity Template that controls the layout of the WCMS Cockpit PageView. This is not mandatory.
+#-------------------------------------------------------------------------------------------------------
+UPDATE PageTemplate;$contentCV[unique=true];uid[unique=true];velocityTemplate[translator=de.hybris.platform.commerceservices.impex.impl.FileLoaderValueTranslator]
+;;KnackLandingPage1Template;$jarResourceCms/structure-view/structure_knackPage1Template.vm
+# end of knack template 1
+
+# Start of knack template 2
+#Creating page Template
+#-----------------------
+INSERT_UPDATE PageTemplate;$contentCV[unique=true];uid[unique=true];name;frontendTemplateName;restrictedPageTypes(code);active[default=true]
+;;KnackLandingPage2Template;Knack Landing Page 2 Template;layout/knackLayout2Page;ContentPage
+
+#Set up the ContentSlotNames for the template:
+#---------------------------------------------
+INSERT_UPDATE ContentSlotName;name[unique=true];template(uid,$contentCV)[unique=true][default='KnackLandingPage2Template'];validComponentTypes(code)
+;SiteLogo;;CMSImageComponent,BannerComponent
+;HeaderLinks;;CMSLinkComponent,CMSParagraphComponent
+;MiniCart;;MiniCartComponent
+;NavigationBar;;NavigationComponent
+;SearchBox;;;searchbox
+;Section1;;$wideContent
+#;Section2;;$wideContent
+;Section3;;$wideContent
+;Footer;;CMSLinkComponent,CMSParagraphComponent,FooterNavigationComponent
+
+#The list of ContentSlotForTemplate bindings for the PageTemplate is added as follows:
+#-------------------------------------------------------------------------------------
+INSERT_UPDATE ContentSlotForTemplate;$contentCV;uid[unique=true];position[unique=true];pageTemplate(uid,$contentCV)[unique=true][default='KnackLandingPage2Template'];contentSlot(uid,$contentCV)[unique=true];allowOverwrite
+;;SiteLogo-KnackPage2;SiteLogo;;SiteLogoSlot;true
+;;HomepageLink-KnackPage2;HomepageNavLink;;HomepageNavLinkSlot;true
+;;NavigationBar-KnackPage2;NavigationBar;;NavigationBarSlot;true
+;;SearchBox-KnackPage2;SearchBox;;SearchBoxSlot;true
+;;MiniCart-KnackPage2;MiniCart;;MiniCartSlot;true
+;;Footer-KnackPage2;Footer;;FooterSlot;true
+;;HeaderLinks-KnackPage2;HeaderLinks;;HeaderLinksSlot;true
+
+#Create a Velocity Template that controls the layout of the WCMS Cockpit PageView. This is not mandatory.
+#-------------------------------------------------------------------------------------------------------
+UPDATE PageTemplate;$contentCV[unique=true];uid[unique=true];velocityTemplate[translator=de.hybris.platform.commerceservices.impex.impl.FileLoaderValueTranslator]
+;;KnackLandingPage2Template;$jarResourceCms/structure-view/structure_knackPage2Template.vm
+
+# End of Knack Template 2
+
+# Start of knack template 5
+#Creating page Template
+#-----------------------
+INSERT_UPDATE PageTemplate;$contentCV[unique=true];uid[unique=true];name;frontendTemplateName;restrictedPageTypes(code);active[default=true]
+;;KnackLandingPage5Template;Knack Landing Page 5 Template;layout/knackLayout5Page;ContentPage
+
+#Set up the ContentSlotNames for the template:
+#---------------------------------------------
+INSERT_UPDATE ContentSlotName;name[unique=true];template(uid,$contentCV)[unique=true][default='KnackLandingPage5Template'];validComponentTypes(code)
+;SiteLogo;;CMSImageComponent,BannerComponent
+;HeaderLinks;;CMSLinkComponent,CMSParagraphComponent
+;MiniCart;;MiniCartComponent
+;NavigationBar;;NavigationComponent
+;SearchBox;;;searchbox
+;Section1;;$wideContent
+#;Section2;;$wideContent
+#;Section3;;$wideContent
+#;Footer;;CMSLinkComponent,CMSParagraphComponent,FooterNavigationComponent
+
+#The list of ContentSlotForTemplate bindings for the PageTemplate is added as follows:
+#-------------------------------------------------------------------------------------
+INSERT_UPDATE ContentSlotForTemplate;$contentCV;uid[unique=true];position[unique=true];pageTemplate(uid,$contentCV)[unique=true][default='KnackLandingPage5Template'];contentSlot(uid,$contentCV)[unique=true];allowOverwrite
+;;SiteLogo-KnackPage55;SiteLogo;;SiteLogoSlot;true
+;;HomepageLink-KnackPage55;HomepageNavLink;;HomepageNavLinkSlot;true
+;;NavigationBar-KnackPage5;NavigationBar;;NavigationBarSlot;true
+;;SearchBox-KnackPage5;SearchBox;;SearchBoxSlot;true
+;;MiniCart-KnackPage5;MiniCart;;MiniCartSlot;true
+#;;Footer-KnackPage5;Footer;;FooterSlot;true
+;;HeaderLinks-KnackPage5;HeaderLinks;;HeaderLinksSlot;true
+
+#Create a Velocity Template that controls the layout of the WCMS Cockpit PageView. This is not mandatory.
+#-------------------------------------------------------------------------------------------------------
+UPDATE PageTemplate;$contentCV[unique=true];uid[unique=true];velocityTemplate[translator=de.hybris.platform.commerceservices.impex.impl.FileLoaderValueTranslator]
+;;KnackLandingPage5Template;$jarResourceCms/structure-view/structure_knackPage5Template.vm
+
+# End of Knack Template 5
+
 # Create ContentSlotNames
 # Each PageTemplate has a number of ContentSlotNames, with a list of valid components for the slot.
 # There are a standard set of slots and a number of specific slots for each template.
@@ -994,4 +1114,3 @@ INSERT_UPDATE CategoryPage;$contentCV[unique=true];uid[unique=true];name;masterT
 ;;productList;Product List;ProductListPageTemplate;true;
 ;;productGrid;Product Grid;ProductGridPageTemplate;false;
 ;;category;Default Category Page;CategoryPageTemplate;false;
-

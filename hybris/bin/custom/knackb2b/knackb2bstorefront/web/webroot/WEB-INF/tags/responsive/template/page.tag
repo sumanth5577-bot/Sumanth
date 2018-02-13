@@ -3,7 +3,6 @@
 <%@ attribute name="pageCss" required="false" fragment="true"%>
 <%@ attribute name="pageScripts" required="false" fragment="true"%>
 <%@ attribute name="hideHeaderLinks" required="false"%>
-
 <%@ taglib prefix="template" tagdir="/WEB-INF/tags/responsive/template"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="header" tagdir="/WEB-INF/tags/responsive/common/header"%>
@@ -11,6 +10,8 @@
 <%@ taglib prefix="common" tagdir="/WEB-INF/tags/responsive/common"%>
 <%@ taglib prefix="cart" tagdir="/WEB-INF/tags/responsive/cart" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+
+<%@ attribute name="layout" required="false" rtexprvalue="true"%>
 
 <spring:htmlEscape defaultHtmlEscape="true" />
 
@@ -35,7 +36,13 @@
 			<a href="#skip-to-content" class="skiptocontent" data-role="none">${fn:escapeXml(skipToContent)}</a>
 			<spring:theme code="text.skipToNavigation" var="skipToNavigation" />
 			<a href="#skiptonavigation" class="skiptonavigation" data-role="none">${fn:escapeXml(skipToNavigation)}</a>
-			<header:header hideHeaderLinks="${hideHeaderLinks}" />			
+			
+			
+			<header:headerCheck layout="${layout}"/>
+			<%-- <header:header hideHeaderLinks="${hideHeaderLinks}" /> --%>
+			
+
+			
 			
 			<a id="skip-to-content"></a>
 		

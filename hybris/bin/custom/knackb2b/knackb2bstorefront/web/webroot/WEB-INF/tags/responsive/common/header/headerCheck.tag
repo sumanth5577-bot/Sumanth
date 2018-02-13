@@ -8,13 +8,13 @@
 			<c:when test="${layout eq 'knack1' }">
 				<header:header1 hideHeaderLinks="${hideHeaderLinks}" />
 			</c:when>		
-			<%-- <c:when test="${layout eq 'knack2' }">
+			 <c:when test="${layout eq 'knack2' }">
 				<header:header2 hideHeaderLinks="${hideHeaderLinks}" />
 			</c:when>
 			<c:when test="${layout eq 'knack3' }">
 				<header:header3 hideHeaderLinks="${hideHeaderLinks}" />
 			</c:when>		
-			<c:when test="${layout eq 'knack4' }">
+			<%-- <c:when test="${layout eq 'knack4' }">
 				<header:header4 hideHeaderLinks="${hideHeaderLinks}" />
 			</c:when> --%>
 			<c:when test="${layout eq 'knack5' }">
