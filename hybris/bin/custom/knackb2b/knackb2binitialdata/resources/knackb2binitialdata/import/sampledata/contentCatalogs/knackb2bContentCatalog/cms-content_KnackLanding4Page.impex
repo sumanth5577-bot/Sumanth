@@ -16,81 +16,96 @@ $lang=en
 #Creating page Template
 #-----------------------
 INSERT_UPDATE PageTemplate;$contentCV[unique=true];uid[unique=true];name;frontendTemplateName;restrictedPageTypes(code);active[default=true]
-;;KnackLandingPage3Template;Knack Landing Page 3 Template;layout/knackLayout3Page;ContentPage
+;;KnackLandingPage4Template;Knack Landing Page 4 Template;layout/knackLayout4Page;ContentPage
 
 #Set up the ContentSlotNames for the template:
 #---------------------------------------------
-INSERT_UPDATE ContentSlotName;name[unique=true];template(uid,$contentCV)[unique=true][default='KnackLandingPage3Template'];validComponentTypes(code)
+INSERT_UPDATE ContentSlotName;name[unique=true];template(uid,$contentCV)[unique=true][default='KnackLandingPage4Template'];validComponentTypes(code)
 ;SiteLogo;;CMSImageComponent,BannerComponent
 ;HeaderLinks;;CMSLinkComponent,CMSParagraphComponent
 ;MiniCart;;MiniCartComponent
 ;NavigationBar;;NavigationComponent
-;Section1;;$wideContent
-#;Section2;;$wideContent
-;Section3;;$wideContent
+#;Section1;;$wideContent
+;Section2;;$wideContent
+;Section4;;$wideContent
 ;Footer;;CMSLinkComponent,CMSParagraphComponent,FooterNavigationComponent
 ;SearchBox;;;searchbox
 
 #The list of ContentSlotForTemplate bindings for the PageTemplate is added as follows:
 #-------------------------------------------------------------------------------------
-INSERT_UPDATE ContentSlotForTemplate;$contentCV;uid[unique=true];position[unique=true];pageTemplate(uid,$contentCV)[unique=true][default='KnackLandingPage3Template'];contentSlot(uid,$contentCV)[unique=true];allowOverwrite
-;;SiteLogo-KnackPage3;SiteLogo;;SiteLogoSlot;true
-#;;HomepageLink-KnackPage3;HomepageNavLink;;HomepageNavLinkSlot;true
-;;NavigationBar-KnackPage3;NavigationBar;;NavigationBarSlot;true
-;;SearchBox-KnackPage3;SearchBox;;SearchBoxSlot;true
-;;MiniCart-KnackPage3;MiniCart;;MiniCartSlot;true
-;;Footer-KnackPage3;Footer;;FooterSlot;true
-;;HeaderLinks-KnackPage3;HeaderLinks;;HeaderLinksSlot;true
+INSERT_UPDATE ContentSlotForTemplate;$contentCV;uid[unique=true];position[unique=true];pageTemplate(uid,$contentCV)[unique=true][default='KnackLandingPage4Template'];contentSlot(uid,$contentCV)[unique=true];allowOverwrite
+;;SiteLogo-KnackPage4;SiteLogo;;SiteLogoSlot;true
+#;;HomepageLink-KnackPage4;HomepageNavLink;;HomepageNavLinkSlot;true
+;;NavigationBar-KnackPage4;NavigationBar;;NavigationBarSlot;true
+;;SearchBox-KnackPage4;SearchBox;;SearchBoxSlot;true
+;;MiniCart-KnackPage4;MiniCart;;MiniCartSlot;true
+;;Footer-KnackPage4;Footer;;FooterSlot;true
+;;HeaderLinks-KnackPage4;HeaderLinks;;HeaderLinksSlot;true
 
 
 # Media Content
 INSERT_UPDATE Media;mediaFormat(qualifier);code[unique=true];@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator][forceWrite=true];realfilename;altText;mime[default='image/svg+xml'];$contentCV[unique=true];folder(qualifier)[default=images]
+# Knack Home page Banner
 ;widescreen;KnackHomepageBanner-1400x480-BigSplash-EN-01-1400W.jpg;$siteResource/images/banners/site/KnackHomepageBanner-1400x480-BigSplash-EN-01-1400W.jpg;KnackHomepageBanner-1400x480-BigSplash-EN-01-1400W.jpg;"Knack Home Page Banner";
 ;mobile;KnackHomePageBanner-770x350-mobile-EN-01-770W.jpg;$siteResource/images/banners/site/KnackHomePageBanner-770x350-mobile-EN-01-770W.jpg;KnackHomePageBanner-770x350-mobile-EN-01-770W.jpg;"Knack Home Page Banner";
 ;tablet;KnackHomepageBanner-1400x480-BigSplash-EN-01-1400W.jpg;$siteResource/images/banners/site/KnackHomepageBanner-1400x480-BigSplash-EN-01-1400W.jpg;KnackHomepageBanner-1400x480-BigSplash-EN-01-1400W.jpg;"Knack Home page Banner";
 ;desktop;KnackHomepageBanner-1400x480-BigSplash-EN-01-1400W.jpg;$siteResource/images/banners/site/KnackHomepageBanner-1400x480-BigSplash-EN-01-1400W.jpg;KnackHomepageBanner-1400x480-BigSplash-EN-01-1400W.jpg;"Knack Home page Banner";
 
+# Knack Home page Marketing Products Banner
+;widescreen;KnackMarketingProducts_1400x440_HomeSpeed_EN_01_1400W.jpg;$siteResource/images/banners/site/KnackMarketingProducts_1400x440_HomeSpeed_EN_01_1400W.jpg;KnackMarketingProducts_1400x440_HomeSpeed_EN_01_1400W.jpg;"Knack Home page Marketing Products Banner";
+;mobile;KnackMarketingProducts_480x320_HomeSpeed_EN_01_480W.jpg;$siteResource/images/banners/site/KnackMarketingProducts_480x320_HomeSpeed_EN_01_480W.jpg;KnackMarketingProducts_480x320_HomeSpeed_EN_01_480W.jpg;"Knack Home page Marketing Products Banner";
+;tablet;KnackMarketingProducts_770x350_HomeSpeed_EN_01_770W.jpg;$siteResource/images/banners/site/KnackMarketingProducts_770x350_HomeSpeed_EN_01_770W.jpg;KnackMarketingProducts_770x350_HomeSpeed_EN_01_770W.jpg;"Knack Home page Marketing Products Banner";
+;desktop;KnackMarketingProducts_960x330_HomeSpeed_EN_01_960W.jpg;$siteResource/images/banners/site/KnackMarketingProducts_960x330_HomeSpeed_EN_01_960W.jpg;KnackMarketingProducts_960x330_HomeSpeed_EN_01_960W.jpg;"Knack Home page Marketing Products Banner";
+
+
+
+
 INSERT_UPDATE MediaContainer;qualifier[unique=true];$medias;$contentCV[unique=true]
 ;knackb2b-KnackHomepageBanner-en;KnackHomepageBanner-1400x480-BigSplash-EN-01-1400W.jpg,KnackHomePageBanner-770x350-mobile-EN-01-770W.jpg,KnackHomepageBanner-1400x480-BigSplash-EN-01-1400W.jpg,KnackHomepageBanner-1400x480-BigSplash-EN-01-1400W.jpg
+;knackb2b-KnackHomepage25%Banner-en;KnackMarketingProducts_1400x440_HomeSpeed_EN_01_1400W.jpg,KnackMarketingProducts_480x320_HomeSpeed_EN_01_480W.jpg,KnackMarketingProducts_770x350_HomeSpeed_EN_01_770W.jpg,KnackMarketingProducts_960x330_HomeSpeed_EN_01_960W.jpg
+
 
 INSERT_UPDATE SimpleResponsiveBannerComponent;$contentCV[unique=true];uid[unique=true];name;&componentRef
+#;;PowertoolsHompage25%BannerComponent;Powertools Homepage 25% Great Deal Banner Component;PowertoolsHompage25%BannerComponent
 ;;KnackHomepageBannerComponent;Knack Home Page Banner Component;KnackHomepageBannerComponent
-;;KnackHomeProductCarouselComponent;Knack Home Page Carousel Component;KnackHomeProductCarouselComponent
+#;;KnackHomeProductCarouselComponent;Knack Home Page Carousel Component;KnackHomeProductCarouselComponent
 
 
 INSERT_UPDATE SimpleResponsiveBannerComponent;$contentCV[unique=true];uid[unique=true];name;&componentRef;$mediaContainer
 ;;KnackHomepageBannerComponent;Knack Home Page Banner Component;KnackHomepageBannerComponent;knackb2b-KnackHomepageBanner-en
-;;KnackHomeProductCarouselComponent;What's New Knack Homepage Product Carousel;KnackHomeProductCarouselComponent
+;;PowertoolsHompage25%BannerComponent;Powertools Homepage 25% Great Deal Banner Component;PowertoolsHompage25%BannerComponent;knackb2b-KnackHomepage25%Banner-en
+#;;KnackHomeProductCarouselComponent;What's New Knack Homepage Product Carousel;KnackHomeProductCarouselComponent
 #;;PowertoolsHompageScrewdriversBannerComponent;Powertools Hompage Screwdrivers Banner Component;PowertoolsHompageScrewdriversBannerComponent
 
-INSERT_UPDATE ProductCarouselComponent;$contentCV[unique=true];uid[unique=true];name;products(code,$productCV);scroll(code);popup;&componentRef
-;;Knackb2bHomepageNewProductCarouselComponent;What's New Powertools Homepage Product Carousel;3755219,3881018,3592865,2116279,3755204,1128762,3092788;allVisible;false;Knackb2bHomepageNewProductCarouselComponent
-;;PowertoolsHomepageProductCarouselComponent;Powertools Homepage Product Carousel;3755205,3755211,3756505,3793682,2221933,2116275,2116282;allVisible;false;PowertoolsHomepageProductCarouselComponent
+#INSERT_UPDATE ProductCarouselComponent;$contentCV[unique=true];uid[unique=true];name;products(code,$productCV);scroll(code);popup;&componentRef
+#;;Knackb2bHomepageNewProductCarouselComponent;What's New Powertools Homepage Product Carousel;3755219,3881018,3592865,2116279,3755204,1128762,3092788;allVisible;false;Knackb2bHomepageNewProductCarouselComponent
+#;;PowertoolsHomepageProductCarouselComponent;Powertools Homepage Product Carousel;3755205,3755211,3756505,3793682,2221933,2116275,2116282;allVisible;false;PowertoolsHomepageProductCarouselComponent
 
 ###### Homepage Start ######
-## Based on knackLayout3Page.jsp ##
+## Based on knackLayout4Page.jsp ##
 INSERT_UPDATE ContentSlotForPage;$contentCV[unique=true];uid[unique=true];position[unique=true];page(uid,$contentCV)[unique=true][default='homepage'];contentSlot(uid,$contentCV)[unique=true]
-;;Section1-Homepage;Section1;;Section1Slot-Homepage
+#;;Section1-Homepage;Section1;;Section1Slot-Homepage
 ;;Section2-Homepage;Section2;;Section2Slot-Homepage
 #;;Section2B-Homepage;Section2B;;Section2BSlot-Homepage
 #;;Section3-Homepage;Section3;;Section3Slot-Homepage
-#;;Section4-Homepage;Section4;;Section4Slot-Homepage
+;;Section4-Homepage;Section4;;Section4Slot-Homepage
 #;;Section5-Homepage;Section5;;Section5Slot-Homepage
 
 INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];name;active;cmsComponents(&componentRef)
-;;Section1Slot-Homepage;Section1 Slot for Homepage;true;KnackHomepageBannerComponent
-#;;Section2Slot-Homepage;Section2 Slot for Homepage;true;KnackHomeProductCarouselComponent
+#;;Section1Slot-Homepage;Section1 Slot for Homepage;true;KnackHomepageBannerComponent
+;;Section2Slot-Homepage;Section2 Slot for Homepage;true;PowertoolsHompage25%BannerComponent
 #;;Section2BSlot-Homepage;Section2B Slot for Homepage;true;PowertoolsHompageScrewdriversBannerComponent,PowertoolsHompageSandersBannerComponent
-;;Section3Slot-Homepage;Section3 Slot for Homepage;true;Knackb2bHomepageNewProductCarouselComponent
-#;;Section4Slot-Homepage;Section4 Slot for Homepage;true;PowertoolsHompage25%BannerComponent,PowertoolsHompage30dayBannerComponent,PowertoolsHompage6pmBannerComponent,PowertoolsHompage24/7BannerComponent
+#;;Section3Slot-Homepage;Section3 Slot for Homepage;true;Knackb2bHomepageNewProductCarouselComponent
+;;Section4Slot-Homepage;Section4 Slot for Homepage;true;KnackHomepageBannerComponent
 
+#;;Section2Slot-Homepage;Section2 Slot for Homepage;true;PowertoolsHompage25%BannerComponent,PowertoolsHompage30dayBannerComponent,PowertoolsHompage6pmBannerComponent,PowertoolsHompage24/7BannerComponent
 
 
 #Create a Velocity Template that controls the layout of the WCMS Cockpit PageView. This is not mandatory.
 #-------------------------------------------------------------------------------------------------------
 UPDATE PageTemplate;$contentCV[unique=true];uid[unique=true];velocityTemplate[translator=de.hybris.platform.commerceservices.impex.impl.FileLoaderValueTranslator]
-;;KnackLandingPage3Template;$jarResourceCms/structure-view/structure_knackPage3Template.vm
+;;KnackLandingPage4Template;$jarResourceCms/structure-view/structure_knackPage4Template.vm
 
 INSERT_UPDATE ContentPage;$contentCV[unique=true];uid[unique=true];name;masterTemplate(uid,$contentCV);label;defaultPage[default='true'];approvalStatus(code)[default='approved'];homepage[default='true']
-;;homepage;knack3 Homepage;KnackLandingPage3Template;homepage
+;;homepage;knack4 Homepage;KnackLandingPage4Template;homepage
 

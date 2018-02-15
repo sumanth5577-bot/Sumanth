@@ -19,22 +19,22 @@
                 </td>
             </tr>
             <tr>
-                <td colspan="5" height="58px" style="vertical-align:middle;" class="structureViewSection">
+                <td width="100%" colspan="5" height="58px" style="vertical-align:middle;" class="structureViewSection">
                     <div>Breadcrumb</div>
                 </td>
             </tr>
             <tr>
-                <td colspan="5" style="vertical-align:top;" class="structureViewSection">
-                    <cockpit code="Section1"/>
+                <td width="100%" colspan="5" style="vertical-align:top;" class="structureViewSection">
+                    <cockpit code="Section2"/>
                 </td>
             </tr>
             <tr>
-                <td width="20%" style="vertical-align:top;" class="structureViewSection">
-                    <cockpit code="Section3"/>
+                <td width="100%" style="vertical-align:top;" class="structureViewSection">
+                    <cockpit code="Section4"/>
                 </td>
             </tr>
             <tr>
-                <td height="270px" colspan="5" class="structureViewSection">
+                <td height="270px" width="100%" colspan="5" class="structureViewSection">
                     <cockpit code="Footer"/>
                 </td>
             </tr>

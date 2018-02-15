@@ -9040,7 +9040,8 @@ ul.nav__links::after {
   .navigation--bottom .navigation__overflow {
     left: -380px;
     top: 0;
-    height: 83vh;
+    height: 75vh;
+    width: 25%;
     overflow-y: auto;
     border-top: 1px solid #d3d3d3;
   }
@@ -9165,9 +9166,9 @@ ul.nav__links::after {
 .navigation--bottom .nav__links--products li a {
   text-transform: uppercase;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 10px;
   line-height: 20px;
-  padding: 20px 15px;
+  padding: 10px 12px;
   display: block;
   color: #ffffff;
 }
@@ -9590,7 +9591,6 @@ ul.nav__links::after {
 }
 .nav-order-tools {
   position: relative;
-  display: inline-block;
   cursor: pointer;
 }
 @media (min-width: 640px) {
@@ -9734,6 +9734,9 @@ ul.nav__links::after {
 }
 .search-results-highlight {
   font-weight: bold;
+}
+.search-box {
+  padding-top: 10px;
 }
 header {
   background: #f8f8f8;
