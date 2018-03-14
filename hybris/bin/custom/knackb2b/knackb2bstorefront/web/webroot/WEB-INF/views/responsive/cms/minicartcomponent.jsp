@@ -25,8 +25,23 @@
 		>
 		<div class="mini-cart-icon">
 			<span class="glyphicon glyphicon-shopping-cart "></span>
+			<ycommerce:testId code="miniCart_items_label">
+
+				(<c:if test="${totalDisplay == 'TOTAL'}">
+					<format:price priceData="${totalPrice}" />&nbsp;,
+				</c:if>
+
+				<c:if test="${totalDisplay == 'SUBTOTAL'}">
+					<format:price priceData="${subTotal}" />&nbsp;,
+				</c:if>
+
+				<c:if test="${totalDisplay == 'TOTAL_WITHOUT_DELIVERY'}">
+					<format:price priceData="${totalNoDelivery}" />&nbsp;,
+				</c:if>
+			<span class="nav-items-total">${totalItems lt 100 ? totalItems : "99+"}<span class="items-desktop hidden-xs">&nbsp;<spring:theme code="basket.items"/></span></span>)
+		</ycommerce:testId>
 		</div>
-		<ycommerce:testId code="miniCart_items_label">
+		<%-- <ycommerce:testId code="miniCart_items_label">
 
 			<div class="mini-cart-price js-mini-cart-price hidden-xs hidden-sm">
 				<c:if test="${totalDisplay == 'TOTAL'}">
@@ -42,7 +57,7 @@
 				</c:if>
 			</div>
 			<div class="mini-cart-count js-mini-cart-count"><span class="nav-items-total">${totalItems lt 100 ? totalItems : "99+"}<span class="items-desktop hidden-xs">&nbsp;<spring:theme code="basket.items"/></span></span></div>
-		</ycommerce:testId>
+		</ycommerce:testId> --%>
 
 	</a>
 </div>
