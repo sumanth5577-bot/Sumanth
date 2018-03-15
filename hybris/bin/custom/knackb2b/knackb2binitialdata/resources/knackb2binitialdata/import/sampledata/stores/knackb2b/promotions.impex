@@ -42,6 +42,8 @@ INSERT PromotionPriceRow;&thresholdPriceId;Currency(isocode);price
 #3% off orders over $500
 INSERT_UPDATE OrderThresholdDiscountPercentagePromotion;PromotionGroup(Identifier[default=$defaultPromoGrp]);enabled[default=true][unique=true];code[unique=true];title;description;messageCouldHaveFired[lang=en];priority;thresholdTotals(&thresholdPriceId);percentageDiscount
 ;;;3PercentDiscountOver500;3% off orders over $500;3% off orders over $500;3% off orders over $500;500;500;3
+#added by bharath.
+;;;7PercentDiscountOver1500;7% off orders over $1500;7% off orders over $1500;7% off orders over $1500;500;500;3
 
 #Buy 2 Power Drills, Get 1 Free
 INSERT_UPDATE AcceleratorProductBOGOFPromotion;PromotionGroup(Identifier[default=$defaultPromoGrp]);enabled[default=true][unique=true];code[unique=true];title;description;messageCouldHaveFired[lang=en];messageFired[lang=en];priority;categories(code,$catalogVersion);qualifyingCount;freeCount
@@ -54,6 +56,7 @@ INSERT_UPDATE ProductBundlePromotion;PromotionGroup(Identifier[default=$defaultP
 #10% off on Sanders
 INSERT_UPDATE ProductPercentageDiscountPromotion;PromotionGroup(Identifier[default=$defaultPromoGrp]);enabled[default=true][unique=true];code[unique=true];title;description;messageFired[lang=en];percentageDiscount;priority;categories(code,$catalogVersion)
 ;;;10DiscountSanders;10% off on Sanders;10% off on Sanders;10% off on Sanders;10;900;1596
+;;;5DiscountonPowerDrills;5% off on Power-Drills;10% off on Power-Drills;10% off on Power-Drills;10;900;1360
 
 INSERT_UPDATE ProductMultiBuyPromotion;PromotionGroup(Identifier[default=$defaultPromoGrp]);enabled[default=true][unique=true];code[unique=true];title;description;priority;categories(code,$catalogVersion);qualifyingCount;bundlePrices(&priceId)
 

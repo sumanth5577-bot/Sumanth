@@ -16,6 +16,7 @@ $lang=en
 #3% off orders over $500
 UPDATE OrderThresholdDiscountPercentagePromotion;enabled[default=true][unique=true];code[unique=true];messageCouldHaveFired[lang=$lang];
 ;;3PercentDiscountOver500;3% off orders over $500;;
+;;7PercentDiscountOver1500;7% off orders over $1500;;
 
 
 #Buy 2 Power Drills, Get 1 Free
@@ -31,6 +32,7 @@ UPDATE ProductBundlePromotion;enabled[default=true][unique=true];code[unique=tru
 #10% off on Sanders
 UPDATE ProductPercentageDiscountPromotion;enabled[default=true][unique=true];code[unique=true];messageFired[lang=$lang];
 ;;10DiscountSanders;10% off on Sanders;;
+;;5DiscountonPowerDrills;5% off on Power-Drills;;
 
 
 #Discount on the cart using a coupon (promotion voucher)
